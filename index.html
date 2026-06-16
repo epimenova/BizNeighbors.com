@@ -404,6 +404,85 @@
     text-align: center;
   }
 
+  /* ── BLOG ── */
+  .blog {
+    padding: 100px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 60px;
+  }
+
+  .blog-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+  .blog-card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    transform: translateY(-6px);
+  }
+
+  .blog-card-img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+  }
+
+  .blog-card-body {
+    padding: 24px;
+  }
+
+  .blog-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--green-dark);
+    background: rgba(46,204,113,0.1);
+    padding: 4px 10px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+  }
+
+  .blog-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .blog-card p {
+    font-size: 0.85rem;
+    color: var(--ink-mid);
+    line-height: 1.65;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  .blog-card-meta {
+    font-size: 0.75rem;
+    color: #aaa;
+    font-weight: 400;
+  }
+
+  @media (max-width: 900px) {
+    .blog { padding: 72px 24px; }
+    .blog-grid { grid-template-columns: 1fr; }
+  }
+
   /* ── FOOTER ── */
   footer {
     background: var(--ink);
@@ -448,7 +527,11 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">Biz<span>Neighbors</span></a>
-
+  <div class="nav-actions">
+    <a href="about.html" style="text-decoration:none; color: #444; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: color 0.2s;">About Us</a>
+    <a href="events.html" style="text-decoration:none; color: #444; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: color 0.2s;">Events</a>
+    <a href="blog.html" style="text-decoration:none; color: #444; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: color 0.2s;">Blog</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -466,7 +549,7 @@
 <section class="features">
   <div class="reveal">
     <div class="section-label">What you get</div>
-    <h2 class="section-title">Everything your neighborhood business needs</h2>
+    <h2 class="section-title">An easy way to connect with your neighbors or other owners in your industry</h2>
   </div>
   <div class="cards">
     <div class="card reveal">
@@ -501,7 +584,7 @@
   <div class="why-inner">
     <div class="reveal">
       <div class="section-label" style="color: var(--green)">Why join</div>
-      <h2>Because running a shop shouldn't mean doing it <span>alone</span></h2>
+      <h2>Because running a store shouldn't be a <span>lonely business</span></h2>
       <p>Running a local shop comes with unique challenges — and too often, owners face them alone.</p>
       <p>Our platform connects neighborhood business owners to share ideas, coordinate promotions, and grow together.</p>
       <p><strong>BizNeighbors</strong> is a safe, supportive space made up of verified business owners. Here, members connect, share personal experiences, and help each other navigate the challenges of running a business.</p>
@@ -557,6 +640,8 @@
   </div>
 </section>
 
+
+
 <!-- FOOTER -->
 <footer>
   <p>© 2026 <strong>BizNeighbors</strong> — A community built for storefront entrepreneurs.</p>
@@ -590,3 +675,4 @@
 
 </body>
 </html>
+
